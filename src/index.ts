@@ -14,6 +14,8 @@
 import { DataStore } from '@torch-orm/core';
 import { CloudflareKVDataAdapter } from './CloudflareKVDataAdapter';
 
+export * from './CloudflareKVDataAdapter';
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		const adapter = new CloudflareKVDataAdapter({
@@ -23,9 +25,8 @@ export default {
 			collection: 'config',
 			adapter,
 		});
-		await store.set('enable', 1);
+		await store.set('enable', true);
 		const enable = await store.get('enable');
-		console.log(enable);
-		return new Response('Hello World!');
+		return Response.json({ enable });
 	},
 } satisfies ExportedHandler<Env>;

@@ -13,7 +13,7 @@ export class CloudflareKVDataAdapter extends KeyValueDataAdapter {
 	}
 
 	public async getValue<T>(key: string): Promise<T> {
-		return JSON.parse((await this.kv.get(key)) as string) as T;
+		return (await this.kv.get(key, 'json')) as T;
 	}
 	public async setValue<T>(key: string, value: T): Promise<void> {
 		await this.kv.put(key, JSON.stringify(value));
@@ -22,7 +22,7 @@ export class CloudflareKVDataAdapter extends KeyValueDataAdapter {
 		await this.kv.delete(key);
 	}
 	public async getIndex(key: string): Promise<string[]> {
-		return (await this.kv.list({ prefix: key })).keys.map((key) => key.name);
+		return (await this.kv.get(key, 'json')) ?? [];
 	}
 	public async setIndex(key: string, value: string[]): Promise<void> {
 		await this.kv.put(key, JSON.stringify(value));

@@ -1,6 +1,6 @@
 {
-	"name": "torch-orm-cf-kv",
-	"version": "0.0.0",
+	"name": "@torch-orm/cloudflare-kv",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
