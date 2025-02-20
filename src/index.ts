@@ -11,8 +11,21 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+import { DataStore } from '@torch-orm/core';
+import { CloudflareKVDataAdapter } from './CloudflareKVDataAdapter';
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		const adapter = new CloudflareKVDataAdapter({
+			kv: env.TORCH_ORM_TEST,
+		});
+		const store = new DataStore({
+			collection: 'config',
+			adapter,
+		});
+		await store.set('enable', true);
+		// const enable = await store.get('enable');
+		// console.log(enable);
 		return new Response('Hello World!');
 	},
 } satisfies ExportedHandler<Env>;

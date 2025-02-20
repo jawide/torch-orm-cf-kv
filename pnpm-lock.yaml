@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@torch-orm/core':
+    specifier: ^1.1.0
+    version: 1.1.0
+
 devDependencies:
   '@cloudflare/vitest-pool-workers':
     specifier: ^0.6.4
@@ -11,6 +16,9 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: ^4.20250214.0
     version: 4.20250214.0
+  '@torch-orm/test':
+    specifier: ^1.1.0
+    version: 1.1.0(@torch-orm/core@1.1.0)
   typescript:
     specifier: ^5.5.2
     version: 5.7.3
@@ -960,6 +968,17 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@torch-orm/core@1.1.0:
+    resolution: {integrity: sha512-sZ14aZqWZVtGCBalVUN6WkgdvojWg5cw+fL2kTf2PKJR4fD20yMMJg4oN+vXHZRpXSx8RvBQANJ9pE0v2FyahA==}
+
+  /@torch-orm/test@1.1.0(@torch-orm/core@1.1.0):
+    resolution: {integrity: sha512-335BEsQX4u/N6QHvkn0YlPV4aNbskbuFUNVd4ixDZKU9WfGAheSmVvAj0TEVli3W2gtLCygKomhtBfTWb9AUyA==}
+    peerDependencies:
+      '@torch-orm/core': ^1.1.0
+    dependencies:
+      '@torch-orm/core': 1.1.0
+    dev: true
 
   /@types/estree@1.0.6:
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
