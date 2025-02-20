@@ -23,9 +23,9 @@ export default {
 			collection: 'config',
 			adapter,
 		});
-		await store.set('enable', true);
-		// const enable = await store.get('enable');
-		// console.log(enable);
+		await store.set('enable', 1);
+		const enable = await store.get('enable');
+		console.log(enable);
 		return new Response('Hello World!');
 	},
 } satisfies ExportedHandler<Env>;

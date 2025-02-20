@@ -18,6 +18,6 @@
 		"wrangler": "^3.109.2"
 	},
 	"peerDependencies": {
-		"@torch-orm/core": "^1.1.0"
+		"@torch-orm/core": "^1.1.1"
 	}
 }
