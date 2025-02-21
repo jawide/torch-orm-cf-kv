@@ -11,7 +11,7 @@
 		"version:patch": "pnpm version patch",
 		"version:minor": "pnpm version minor",
 		"version:major": "pnpm version major",
-		"publish:npm": "pnpm publish"
+		"publish:npm": "pnpm build && pnpm publish"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.6.4",
