@@ -19,7 +19,7 @@
 		"wrangler": "^3.109.2"
 	},
 	"peerDependencies": {
-		"@torch-orm/core": "^1.1.1"
+		"@torch-orm/core": "^1.1.2"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

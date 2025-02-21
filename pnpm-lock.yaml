@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@torch-orm/core':
-    specifier: ^1.1.1
-    version: 1.1.1
+    specifier: ^1.1.2
+    version: 1.1.2
 
 devDependencies:
   '@cloudflare/vitest-pool-workers':
@@ -18,7 +18,7 @@ devDependencies:
     version: 4.20250214.0
   '@torch-orm/test':
     specifier: ^1.1.0
-    version: 1.1.0(@torch-orm/core@1.1.1)
+    version: 1.1.0(@torch-orm/core@1.1.2)
   typescript:
     specifier: ^5.5.2
     version: 5.7.3
@@ -969,15 +969,15 @@ packages:
     dev: true
     optional: true
 
-  /@torch-orm/core@1.1.1:
-    resolution: {integrity: sha512-NfpifvQLzhlPUnhRvOeRSJieE2Y6Bc3qn7+XvfHi8N2cnp6LSCVNnFpLkgz32vmDk1OkFqOqEyxff4vLZus2PA==}
+  /@torch-orm/core@1.1.2:
+    resolution: {integrity: sha512-JlChPtm80l5YhvE4CLNf+lYqa4+muuVrSr/4Pn1nYtglSp+qszzs2KHKhCLHj3AG+Y25HW4gZJHaB0COZ7truw==}
 
-  /@torch-orm/test@1.1.0(@torch-orm/core@1.1.1):
+  /@torch-orm/test@1.1.0(@torch-orm/core@1.1.2):
     resolution: {integrity: sha512-335BEsQX4u/N6QHvkn0YlPV4aNbskbuFUNVd4ixDZKU9WfGAheSmVvAj0TEVli3W2gtLCygKomhtBfTWb9AUyA==}
     peerDependencies:
       '@torch-orm/core': ^1.1.0
     dependencies:
-      '@torch-orm/core': 1.1.1
+      '@torch-orm/core': 1.1.2
     dev: true
 
   /@types/estree@1.0.6:
