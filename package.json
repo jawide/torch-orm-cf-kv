@@ -8,6 +8,9 @@
 		"test": "vitest",
 		"cf-typegen": "wrangler types",
 		"build": "tsc",
+		"version:patch": "pnpm version patch",
+		"version:minor": "pnpm version minor",
+		"version:major": "pnpm version major",
 		"publish:npm": "pnpm publish"
 	},
 	"devDependencies": {
