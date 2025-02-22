@@ -17,14 +17,14 @@
 		"@cloudflare/vitest-pool-workers": "^0.6.4",
 		"@cloudflare/workers-types": "^4.20250214.0",
 		"@jest/globals": "^29.7.0",
-		"@torch-orm/test": "^1.1.5",
+		"@torch-orm/test": "^1.1.6",
 		"jest": "^29.7.0",
 		"typescript": "^5.5.2",
 		"vitest": "~2.1.9",
 		"wrangler": "^3.109.2"
 	},
 	"peerDependencies": {
-		"@torch-orm/core": "^1.1.5"
+		"@torch-orm/core": "^1.1.6"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
